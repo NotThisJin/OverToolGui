@@ -10,6 +10,8 @@ Credits:
 
 DataTool From DataWatch: https://discord.gg/XM93ZdB
 
+If there are any issues please @ me in the DataWatch discord or add me Jin#4750
+
 # Previews
 
 ![alt text](https://raw.githubusercontent.com/NotThisJin/OverToolGui/main/Screenshot_10.png)
