@@ -1,0 +1,80 @@
+﻿<UserControl x:Class="OverToolGUI.View.SkinView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:OverToolGUI.View"
+             mc:Ignorable="d"
+             d:DesignHeight="450"
+             d:DesignWidth="650">
+
+	<UserControl.Style>
+		<Style>
+			<Style.Triggers>
+				<EventTrigger RoutedEvent="UserControl.Loaded">
+					<BeginStoryboard>
+						<Storyboard>
+							<DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                             From="0.0"
+                                             To="1.0"
+                                             Duration="0:0:0.5" />
+						</Storyboard>
+					</BeginStoryboard>
+				</EventTrigger>
+			</Style.Triggers>
+		</Style>
+	</UserControl.Style>
+
+	<Grid Background="#303030">
+
+		<RadioButton Height="40"
+                     Width="40"
+                     HorizontalAlignment="Left"
+                     VerticalAlignment="Top"
+                     Tag="Assets/previous.png"
+                     Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}, Path=DataContext.BackHomeCommand}"
+                     Style="{StaticResource HomeButtonStyle}"
+                     Margin="10,10,0,0" />
+
+		<Button Content="Extract" 
+				HorizontalAlignment="Center"
+					 VerticalAlignment="Top"
+					 Style="{StaticResource DownloadButtonStyle2}"
+				Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}, Path=DataContext.DownloadSkins}"
+					 Width="270"
+					 Height="30"
+					 Margin="0,10,0,0" Background="#FFDDDDDD"/>
+
+		<ScrollViewer Margin="10,55,0,0" >
+			<StackPanel>
+				<ItemsControl ItemsSource="{Binding SkinSourceCollection}"
+                      Height="1000"
+                      Width="624"
+                      HorizontalAlignment="Center"
+                      Margin="0,0,0,0">
+
+					<ItemsControl.ItemTemplate>
+						<DataTemplate>
+							<RadioButton Content="{Binding SkinName}"       
+								 CommandParameter="{Binding SkinName}"
+								 Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}, Path=DataContext.SelectSkin}"
+                                 Tag="{Binding SkinImage}"
+                                 Style="{StaticResource GridButtonStyle}"
+                                 GroupName="PCGroup" />
+						</DataTemplate>
+					</ItemsControl.ItemTemplate>
+					<ItemsControl.ItemsPanel>
+						<ItemsPanelTemplate>
+							<UniformGrid Columns="5"
+                                 Rows="10" />
+						</ItemsPanelTemplate>
+					</ItemsControl.ItemsPanel>
+
+				</ItemsControl>
+			</StackPanel>
+		</ScrollViewer >
+
+
+	</Grid>
+
+</UserControl>

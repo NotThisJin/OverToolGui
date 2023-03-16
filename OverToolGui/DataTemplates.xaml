@@ -1,0 +1,44 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:viewmodel="clr-namespace:OverToolGUI.ViewModel"
+                    xmlns:view="clr-namespace:OverToolGUI.View">
+        
+    <!--Startup Page-->
+
+    <DataTemplate DataType="{x:Type viewmodel:StartupViewModel}">
+        <view:StartupView/>
+    </DataTemplate>
+    
+    <!--Hero Page-->
+
+	<DataTemplate DataType="{x:Type viewmodel:CharacterViewModel}">
+		<view:CharacterView/>
+	</DataTemplate>
+
+
+	<!--Skin Page-->
+	
+	<DataTemplate DataType="{x:Type viewmodel:SkinViewModel}">
+		<view:SkinView/>
+	</DataTemplate>
+
+
+	<!--Map Page-->
+	
+	<DataTemplate DataType="{x:Type viewmodel:MapViewModel}">
+		<view:MapView/>
+	</DataTemplate>
+
+	<!--Voices Page-->
+
+	<DataTemplate DataType="{x:Type viewmodel:VoiceViewModel}">
+		<view:VoicesView/>
+	</DataTemplate>
+
+	<!--Voices Page-->
+
+	<DataTemplate DataType="{x:Type viewmodel:SettingsViewModel}">
+		<view:SettingsView/>
+	</DataTemplate>
+
+</ResourceDictionary>

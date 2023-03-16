@@ -1,0 +1,80 @@
+﻿<UserControl x:Class="OverToolGUI.View.SettingsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:OverToolGUI.View"
+             mc:Ignorable="d"
+             d:DesignHeight="500"
+             d:DesignWidth="650">
+
+	<Grid Background="#303030" Margin="0,0,0,-11">
+
+		<Button Click="ChangePathFolder" Content="Change Path" 
+				HorizontalAlignment="Left"
+					 VerticalAlignment="Top"
+					 Style="{StaticResource ChangeFolder}"
+					 Width="137"
+					 Height="30"
+					 Margin="10,62,0,0" Background="#FFDDDDDD"/>
+
+		<Border x:Name="FolderPathBorder" HorizontalAlignment="Center" Margin="0,97,0,0" VerticalAlignment="Top" Width="630" Height="33" Background="#FFA5A5A5" CornerRadius="5">
+			<TextBlock x:Name="FolderPathText" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Overwatch Folder Path" VerticalAlignment="Center" Width="610" Height="33" Foreground="Black" FontSize="15" FontFamily="Adobe Gothic Std B"/>
+		</Border>
+
+		<Button Click="ChangeExportFolder" Content="Change Export" 
+				HorizontalAlignment="Left"
+					 VerticalAlignment="Top"
+					 Style="{StaticResource ChangeFolder}"
+					 Width="137"
+					 Height="30"
+					 Margin="10,168,0,0" Background="#FFDDDDDD"/>
+
+		<Button Click="SaveFolderPaths" Content="Save Paths" 
+				HorizontalAlignment="Center"
+					 VerticalAlignment="Top"
+					 Width="137"
+				Style="{StaticResource ChangeFolder}"
+					 Height="30"
+					 Margin="0,256,0,0" Background="#FFDDDDDD"/>
+
+		<Border HorizontalAlignment="Center" Margin="0,203,0,0" VerticalAlignment="Top" Width="630" Height="33" Background="#FFA5A5A5" CornerRadius="5">
+			<TextBlock x:Name="FolderExportText" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Export Folder Path" VerticalAlignment="Center" Width="610" Height="33" Foreground="Black" FontSize="15" FontFamily="Adobe Gothic Std B"/>
+		</Border>
+
+		<Button Click="BlenderAddon" Content="Blender Addon" 
+				HorizontalAlignment="Left"
+					 VerticalAlignment="Top"
+					 Style="{StaticResource ChangeFolder}"
+				Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}, Path=DataContext.BlenderAddon}"
+					 Width="137"
+					 Height="30"
+					 Margin="10,479,0,0" Background="#FFDDDDDD"/>
+		<Button Click="Discord" Content="Discord" 
+				HorizontalAlignment="Left"
+					 VerticalAlignment="Top"
+					 Style="{StaticResource ChangeFolder}"
+					 Width="138"
+					 Height="30"
+					 Margin="176,479,0,0" Background="#FFDDDDDD"/>
+
+		<Button Click="DataWatch" Content="DataWatch Git" 
+				HorizontalAlignment="Left"
+					 VerticalAlignment="Top"
+					 Style="{StaticResource ChangeFolder}"
+					 Width="138"
+					 Height="30"
+					 Margin="338,479,0,0" Background="#FFDDDDDD"/>
+
+
+		<Button Click="Github" Content="Github" 
+				HorizontalAlignment="Left"
+					 VerticalAlignment="Top"
+					 Style="{StaticResource ChangeFolder}"
+					 Width="137"
+					 Height="30"
+					 Margin="503,479,0,0" Background="#FFDDDDDD"/>
+
+	</Grid>
+
+</UserControl>

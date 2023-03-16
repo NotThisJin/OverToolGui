@@ -1,0 +1,66 @@
+﻿<UserControl x:Class="OverToolGUI.View.MapView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:OverToolGUI.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="500" d:DesignWidth="650">
+
+	<UserControl.Style>
+		<Style>
+			<Style.Triggers>
+				<EventTrigger RoutedEvent="UserControl.Loaded">
+					<BeginStoryboard>
+						<Storyboard>
+							<DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                             From="0.0"
+                                             To="1.0"
+                                             Duration="0:0:0.5" />
+						</Storyboard>
+					</BeginStoryboard>
+				</EventTrigger>
+			</Style.Triggers>
+		</Style>
+	</UserControl.Style>
+
+	<Grid Background="#303030">
+		<Button Content="Extract" 
+					 VerticalAlignment="Top"
+					 Style="{StaticResource DownloadButtonStyle2}"
+				
+				Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}, Path=DataContext.DownloadSelectedMap}"
+					 Width="270"
+					 Height="30"
+					 Margin="0,10,0,0" Background="#FFDDDDDD"/>
+
+		<ScrollViewer Margin="0,53,0,0">
+			<StackPanel>
+				<ItemsControl ItemsSource="{Binding MapSourceCollection}"
+                      Width="650"
+                      HorizontalAlignment="Center" Margin="0,10,0,10" Height="7500">
+
+					<ItemsControl.ItemTemplate>
+						<DataTemplate>
+							<RadioButton Content="{Binding MapName}"                               
+                                 Tag="{Binding MapImage}"
+										 CommandParameter="{Binding MapName}"
+                                 Style="{StaticResource DownloadButtonStyle}"
+										 Command="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}, Path=DataContext.SelectMaps}"
+                                 GroupName="DesktopGroup" />
+						</DataTemplate>
+					</ItemsControl.ItemTemplate>
+					<ItemsControl.ItemsPanel>
+						<ItemsPanelTemplate>
+							<UniformGrid Columns="1"
+                                 Rows="71" />
+						</ItemsPanelTemplate>
+					</ItemsControl.ItemsPanel>
+
+				</ItemsControl>
+			</StackPanel>
+		</ScrollViewer>
+
+
+	</Grid>
+</UserControl>
