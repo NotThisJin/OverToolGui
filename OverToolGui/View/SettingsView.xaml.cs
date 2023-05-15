@@ -10,9 +10,6 @@ using UserControl = System.Windows.Controls.UserControl;
 
 namespace OverToolGUI.View
 {
-    /// <summary>
-    /// Interaction logic for StartupView.xaml
-    /// </summary>
     public partial class SettingsView : UserControl
     {
         public SettingsView()

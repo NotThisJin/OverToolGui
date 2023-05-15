@@ -102,7 +102,7 @@
 						<DropShadowEffect BlurRadius="2" ShadowDepth="3"/>
 					</TextBlock.Effect>
 				</TextBlock>
-				<TextBlock x:Name="VersionText" TextWrapping="Wrap" Text="0.1.5" Margin="78,552,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Fonts/bignoodletoo.ttf #BigNoodleTooOblique" FontSize="25" Foreground="White">
+				<TextBlock x:Name="VersionText" TextWrapping="Wrap" Text="0.1.6" Margin="78,552,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Fonts/bignoodletoo.ttf #BigNoodleTooOblique" FontSize="25" Foreground="White">
 					<TextBlock.Effect>
 						<DropShadowEffect BlurRadius="2" ShadowDepth="3" Opacity="1"/>
 					</TextBlock.Effect>

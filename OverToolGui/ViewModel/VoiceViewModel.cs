@@ -29,6 +29,7 @@ namespace OverToolGUI.ViewModel
                 new Heroes { HeroName = "Junker Queen", HeroImage = @"Assets/Junkerqueen.png" },
                 new Heroes { HeroName = "Junkrat", HeroImage = @"Assets/Junkrat.png" },
                 new Heroes { HeroName = "Kiriko", HeroImage = @"Assets/Kiriko.png" },
+                new Heroes { HeroName = "Lifeweaver", HeroImage = @"Assets/Lifeweaver.png" },
                 new Heroes { HeroName = "Lucio", HeroImage = @"Assets/Lucio.png" },
                 new Heroes { HeroName = "Mei", HeroImage = @"Assets/Mei.png" },
                 new Heroes { HeroName = "Mercy", HeroImage = @"Assets/Mercy.png" },

@@ -1165,6 +1165,25 @@ namespace OverToolGUI.ViewModel
 
                     CharacterSkinsCollection = new CollectionViewSource { Source = ballSkins };
                     break;
+                case "Lifeweaver":
+                    ObservableCollection<CharacterSkins> lifeSkins = new ObservableCollection<CharacterSkins>
+                    {
+                        new CharacterSkins { SkinName = "Overwatch 2", SkinImage = @"" },
+                        new CharacterSkins { SkinName = "Hydrangea", SkinImage = @"" },
+                        new CharacterSkins { SkinName = "Magnolia", SkinImage = @"" },
+                        new CharacterSkins { SkinName = "Orchid", SkinImage = @"" },
+                        new CharacterSkins { SkinName = "Amsonia", SkinImage = @"" },
+                        new CharacterSkins { SkinName = "Cassia", SkinImage = @"" },
+                        new CharacterSkins { SkinName = "Lotus", SkinImage = @"" },
+                        new CharacterSkins { SkinName = "Phi Ta Khon", SkinImage = @"" },
+                        new CharacterSkins { SkinName = "Regent", SkinImage = @"" },
+                        new CharacterSkins { SkinName = "Sovereign", SkinImage = @"" },
+                        new CharacterSkins { SkinName = "*", SkinImage = @"" },
+
+                    };
+
+                    CharacterSkinsCollection = new CollectionViewSource { Source = lifeSkins };
+                    break;
             }
         }
 

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Jin\Downloads\OverToolGui\OverToolGui\obj\Debug\
+F:\Github\OverToolGui\OverToolGui\obj\Debug\
 OverToolGUI
 none
 false
 DEBUG;TRACE
-C:\Users\Jin\Downloads\OverToolGui\OverToolGui\App.xaml
-9-1135133356
+F:\Github\OverToolGui\OverToolGui\App.xaml
+9-1622965065
 
-211643705202
-151998125671
+202055214147
+15-1199229395
 DataTemplates.xaml;MainWindow.xaml;Styles.xaml;View\SkinView.xaml;View\SettingsView.xaml;View\VoicesView.xaml;View\MapView.xaml;View\CharacterView.xaml;View\StartupView.xaml;
 
-True
+False
 

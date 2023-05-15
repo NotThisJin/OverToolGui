@@ -361,6 +361,10 @@ namespace OverToolGUI.ViewModel
                     SelectedViewModel = new SkinViewModel("Wrecking Ball");
                     SelectChar(parameter);
                     break;
+                case "Lifeweaver":
+                    SelectedViewModel = new SkinViewModel("Lifeweaver");
+                    SelectChar(parameter);
+                    break;
 
             }
         }
